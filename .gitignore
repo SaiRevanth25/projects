@@ -1,0 +1,12 @@
+__pycache__/
+.idea
+
+.vscode
+*.pyc
+
+backtests/
+live/
+
+research.ipynb
+
+config.live.json
