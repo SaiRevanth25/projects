@@ -1,0 +1,29 @@
+{
+    "algorithm-type-name": "StrategyName",
+    "algorithm-language": "Python",
+    "algorithm-location": "workdir/main.py",
+
+    "data-folder": "/Data",
+    "results-destination-folder": "./live",
+
+    "environment": "live-zerodha",
+
+    "live-mode": true,
+    "live-mode-brokerage": "PaperBrokerage  [ZerodhaBrokerage for live trading]", 
+    "data-queue-handler": ["ZerodhaBrokerage"],
+    "setup-handler": "QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler",
+    "result-handler": "QuantConnect.Lean.Engine.Results.LiveTradingResultHandler",
+    "data-feed-handler": "QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed",
+    "real-time-handler": "QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler",
+    "transaction-handler": "QuantConnect.Lean.Engine.TransactionHandlers.BrokerageTransactionHandler",
+    "history-provider": ["BrokerageHistoryProvider", "SubscriptionDataReaderHistoryProvider"],
+
+    "zerodha-api-key": "ZERODHA_API_KEY",
+    "zerodha-access-token": "ZERODHA_ACCESS_TOKEN",
+    "zerodha-product-type": "CNC",
+    "zerodha-trading-segment": "EQUITY",
+    "zerodha-history-subscription": true,
+
+    "log-handler": "QuantConnect.Logging.CompositeLogHandler",
+    "debugging": false
+}
